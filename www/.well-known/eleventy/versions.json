@@ -1,0 +1,13 @@
+
+{
+  "name": "11ty-wellknown",
+  "version": "1.0.0",
+  "author": "Peter deHaan",
+  "license": "MPL-2.0",
+  "lastModified": "2021-08-11T07:39:27.265Z",
+  "engines": {
+    "eleventy": "0.12.1",
+    "liquidjs": "6.4.3",
+    "nunjucks": "3.2.3"
+  }
+}

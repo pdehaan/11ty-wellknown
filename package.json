@@ -1,0 +1,16 @@
+{
+  "name": "11ty-wellknown",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Peter deHaan",
+  "license": "MPL-2.0",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}
