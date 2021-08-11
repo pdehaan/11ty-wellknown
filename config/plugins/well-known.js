@@ -2,27 +2,19 @@ module.exports = function (eleventyConfig = {}, pluginConfig = {}) {
   const urlFilter = eleventyConfig.getFilter("url");
 
   eleventyConfig.addShortcode("wellknown_url", () =>
-    urlFilter(".well-known/eleventy/versions.json")
+    urlFilter(".well-known/eleventy/site.json")
   );
-  eleventyConfig.addShortcode(
-    "wellknown_json",
-    function (shortcodeConfig = {}) {
-      const eleventy = require("@11ty/eleventy/package.json").version;
-      const liquidjs = require("liquidjs/package.json").version;
-      const nunjucks = require("nunjucks/package.json").version;
-      return JSON.stringify(
-        {
-          ...shortcodeConfig,
-          ...pluginConfig,
-          engines: {
-            eleventy,
-            liquidjs,
-            nunjucks,
-          }
-        },
-        null,
-        2
-      );
-    }
-  );
+  eleventyConfig.addShortcode("wellknown_json", function (shortcodeConfig = {}) {
+    const obj = {
+      ...shortcodeConfig,
+      ...pluginConfig,
+      engines: {
+        eleventy: require("@11ty/eleventy/package.json").version,
+        liquidjs: require("liquidjs/package.json").version,
+        nunjucks: require("nunjucks/package.json").version,
+      },
+      lastModified: new Date(),
+    };
+    return JSON.stringify(obj, null, 2);
+  });
 };

@@ -1,4 +1,3 @@
-
 {
   "name": "11ty-wellknown",
   "version": "1.0.0",
@@ -9,10 +8,10 @@
     "type": "git",
     "url": "git+https://github.com/pdehaan/11ty-wellknown.git"
   },
-  "lastModified": "2021-08-11T07:41:58.675Z",
   "engines": {
     "eleventy": "0.12.1",
     "liquidjs": "6.4.3",
     "nunjucks": "3.2.3"
-  }
+  },
+  "lastModified": "2021-08-11T08:22:31.369Z"
 }

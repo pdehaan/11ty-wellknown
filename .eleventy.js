@@ -11,8 +11,6 @@ module.exports = function (eleventyConfig) {
     license: pkg.license,
     homepage: pkg.homepage,
     repository: pkg.repository,
-    //
-    lastModified: new Date(),
   });
 
   return {
